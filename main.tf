@@ -30,6 +30,7 @@ resource "google_compute_firewall" "myfirewall" {
 resource "google_compute_instance" "myinstance" {
     name = "myinstance"
     machine_type = "e2-medium"
+    zone = "us-central1-a"
     network_interface {
       subnetwork = google_compute_subnetwork.public-subnetwork1.name
     }
