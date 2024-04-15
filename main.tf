@@ -32,7 +32,8 @@ resource "google_compute_instance" "myinstance" {
     machine_type = "e2-medium"
     zone = "us-central1-a"
     network_interface {
-      subnetwork = google_compute_subnetwork.public-subnetwork1.name
+      subnetwork = google_compute_subnetwork.public-subnetwork1.id
+      access_config {}
     }
     boot_disk {
       initialize_params {
