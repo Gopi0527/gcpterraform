@@ -9,7 +9,7 @@ region = "us-central1"
 network = google_compute_network.vpc-network.name
 }
 resource "google_compute_subnetwork" "public-subnetwork2" {
-name = "first-subnetwork1"
+name = "first-subnetwork2"
 ip_cidr_range = "10.3.0.0/16"
 region = "us-central1"
 network = google_compute_network.vpc-network.name
@@ -36,8 +36,12 @@ resource "google_compute_instance" "myinstance" {
     }
     boot_disk {
       initialize_params {
-        image = "ubuntu-os-cloud/ubuntu-2204-lts "
+        image = "ubuntu-os-cloud/ubuntu-2204-jammy-v20220420 "
       }
     }
+   metadata = {
+    ssh-keys = "gopikrishnaqt:${file("~/.ssh/id_rsa.pub")}"
+  }
+    metadata_startup_script = "sudo apt update && sudo apt install apache2 -y"
   
 }
