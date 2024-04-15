@@ -9,6 +9,6 @@ terraform {
 
 provider "google" {
    credentials = file("/home/gopikrishnaqt/gcpterraform/acoustic-cargo-416714-8da8162748ae.json")
-  project     = "My First Project"
+  project     = "acoustic-cargo-416714"
   region      = "us-central1"
 }
