@@ -36,7 +36,7 @@ resource "google_compute_instance" "myinstance" {
     }
     boot_disk {
       initialize_params {
-        image = "ubuntu-os-cloud/ubuntu-2204-jammy-v20220420 "
+        image = "ubuntu-os-cloud/ubuntu-2004-focal-v20220712"
       }
     }
    metadata = {
