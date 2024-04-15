@@ -2,6 +2,7 @@ resource "google_compute_network" "first-vpc" {
   project                 = "My First Project"
   name                    = "first-vpc"
   auto_create_subnetworks = false
+ 
 }
 
 resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {

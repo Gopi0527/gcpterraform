@@ -8,6 +8,7 @@ terraform {
 }
 
 provider "google" {
+   credentials = file(Downloads/acoustic-cargo-416714-8da8162748ae.json)
   project     = "My First Project"
   region      = "us-central1"
 }
