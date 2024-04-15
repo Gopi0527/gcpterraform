@@ -6,7 +6,7 @@ resource "google_compute_network" "first-vpc" {
 
 resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
   name          = "first-subnet"
-  network = google_compute_network.first-vpc
+  network       = google_compute_network.first-vpc.id
   ip_cidr_range = "10.0.0.0/16"
   region        = "us-central1"
 }
