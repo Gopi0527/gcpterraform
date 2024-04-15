@@ -12,9 +12,9 @@ provider "google" {
   project     = "acoustic-cargo-416714"
   region      = "us-central1"
 }
-terraform {
- backend "gcs" {
-   bucket  = "gopiterraformbucket"
-   prefix  = "state"
- }
-}
+# terraform {
+#  backend "gcs" {
+#    bucket  = "gopiterraformbucket"
+#    prefix  = "state"
+#  }
+# }
